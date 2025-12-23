@@ -16,9 +16,9 @@ Language: TypeScript. This is highly recommended because event schemas are the "
 
 Backend Framework: Express. Keep it minimal so the pattern remains visible.
 
-Event Store (Database): PostgreSQL with a single events table. It’s excellent for this because of JSONB support and ACID guarantees.
+Event Store (Database): In-memory implementation for demonstration. In production, this would be replaced with PostgreSQL implementation.
 
-Frontend: Vite + Vanilla JS. This keeps the focus on the data flow rather than framework-specific state management.
+Frontend: HTML/CSS + Vanilla JS. This keeps the focus on the data flow rather than framework-specific state management.
 
 Real-time Updates: Socket.io. This will allow the frontend to "see" events being appended to the log in real-time.
 
