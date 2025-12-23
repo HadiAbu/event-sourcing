@@ -1,0 +1,40 @@
+{
+  "name": "event-sourcing",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "An Event Sourcing system in Node.js to learn about distributed systems, auditability, and state management. Unlike traditional CRUD where you only store the current state, in Event Sourcing, you store the history of changes as a sequence of immutable events.",
+  "main": "dist/api/server.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/api/server.js",
+    "dev": "nodemon --exec tsx src/api/server.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HadiAbu/event-sourcing.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HadiAbu/event-sourcing/issues"
+  },
+  "homepage": "https://github.com/HadiAbu/event-sourcing#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.2.1",
+    "socket.io": "^4.8.2",
+    "uuid": "^13.0.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.0.3",
+    "@types/uuid": "^10.0.0",
+    "nodemon": "^3.1.11",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  }
+}

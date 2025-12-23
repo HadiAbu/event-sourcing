@@ -1,0 +1,178 @@
+/* Basic styling for the Event Sourcing demo */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+h2 {
+  color: #34495e;
+  margin: 30px 0 15px 0;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #ecf0f1;
+}
+
+.section {
+  margin-bottom: 30px;
+}
+
+form,
+.operations {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+input {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+input:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
+button {
+  padding: 8px 16px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+button:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+.operation-group {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+#accountsList {
+  margin-top: 15px;
+}
+
+.account-card {
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 6px;
+  padding: 15px;
+  margin-bottom: 10px;
+}
+
+.account-card h3 {
+  margin-bottom: 8px;
+  color: #495057;
+}
+
+.account-card p {
+  margin: 4px 0;
+  font-size: 14px;
+}
+
+.account-card .balance {
+  font-weight: bold;
+  color: #27ae60;
+}
+
+.account-card.closed {
+  background: #f8d7da;
+  border-color: #f5c6cb;
+}
+
+#eventLog {
+  max-height: 400px;
+  overflow-y: auto;
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 6px;
+  padding: 15px;
+}
+
+.event-item {
+  background: white;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 8px;
+  font-family: monospace;
+  font-size: 12px;
+}
+
+.event-item .event-type {
+  font-weight: bold;
+  color: #007bff;
+}
+
+.event-item .timestamp {
+  color: #6c757d;
+  font-size: 11px;
+}
+
+.event-item .data {
+  margin-top: 5px;
+  white-space: pre-wrap;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+
+  form,
+  .operations {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .operation-group {
+    flex-direction: column;
+  }
+}

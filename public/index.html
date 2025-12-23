@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Sourcing Demo</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Event Sourcing Demo</h1>
+      <p>Watch events being appended to the event log in real-time!</p>
+
+      <div class="section">
+        <h2>Create User</h2>
+        <form id="createUserForm">
+          <input type="text" id="userName" placeholder="Name" required />
+          <input type="email" id="userEmail" placeholder="Email" required />
+          <button type="submit">Create User</button>
+        </form>
+      </div>
+
+      <div class="section">
+        <h2>Account Operations</h2>
+        <div class="operations">
+          <input type="text" id="accountId" placeholder="Account ID" required />
+          <div class="operation-group">
+            <input
+              type="number"
+              id="amount"
+              placeholder="Amount"
+              min="0.01"
+              step="0.01"
+              required
+            />
+            <button id="depositBtn">Deposit</button>
+            <button id="withdrawBtn">Withdraw</button>
+          </div>
+          <button id="closeAccountBtn">Close Account</button>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Accounts</h2>
+        <button id="refreshAccountsBtn">Refresh Accounts</button>
+        <div id="accountsList"></div>
+      </div>
+
+      <div class="section">
+        <h2>Event Log</h2>
+        <div id="eventLog"></div>
+      </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
