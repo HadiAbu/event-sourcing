@@ -2,6 +2,11 @@
 
 An Event Sourcing system in Node.js to learn about distributed systems, auditability, and state management. Unlike traditional CRUD where you only store the current state, in Event Sourcing, you store the history of changes as a sequence of immutable events.
 
+Snapshots:
+<img width="1433" height="870" alt="image" src="https://github.com/user-attachments/assets/d825990c-01a9-40fc-aaa0-17e1589e21a8" />
+<img width="1438" height="855" alt="image" src="https://github.com/user-attachments/assets/1f2cb568-5f15-4079-890c-b3b1460c8725" />
+
+
 # The Technology Stack (2025 Recommended)
 
 For a modern, "mini" version that effectively demonstrates the pattern without unnecessary overhead:
