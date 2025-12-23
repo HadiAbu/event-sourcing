@@ -25,7 +25,8 @@ Real-time Updates: Socket.io. This will allow the frontend to "see" events being
 # Project Structure
 
 es-demo/
-├── src/
+
+| src/
 
 │ ├── domain/ # Business Logic
 
