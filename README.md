@@ -22,30 +22,17 @@ Real-time Updates: Socket.io. This will allow the frontend to "see" events being
 
 es-demo/
 ├── src/
-
 │ ├── domain/ # Business Logic
-
 │ │ ├── events.ts # Definitions (e.g., USER_CREATED, FUNDS_DEPOSITED)
-
 │ │ ├── commands.ts # Intent to change state (e.g., CREATE_USER)
-
 │ │ └── aggregate.ts # The "Decider" (Logic to validate & produce events)
-
 │ ├── infrastructure/ # Database & Tools
-
 │ │ └── eventStore.ts # Logic to save/retrieve from the DB
-
 │ ├── projections/ # Read Models
-
 │ │ └── accountView.ts # Logic to "reduce" events into a UI-ready state
-
 │ └── api/ # Entry points
-
 │ └── server.ts # Express/Fastify routes
-
 ├── public/ # Mini Frontend (HTML/CSS/JS)
-
 ├── tsconfig.json
-
 └── package.json
 
